@@ -1093,8 +1093,8 @@ form {
     text-align: center;
     padding: 15px 0;
     background-color: #08213d;
-}
 
+}
 .mobile-menu .logo {
     padding: 20px 0 0 20px;
 }
@@ -1165,6 +1165,15 @@ form {
     /* Display the mobile menu */
     .mobile-menu {
         display: block;
+    }
+    .mobile-menu #collapse-menu {
+        height: 100%;
+        position: relative;
+    }
+    .mobile-menu #collapse-menu img {
+        max-width: 100%;
+        max-height: 80%;
+        height: 50px;
     }
     form {
         overflow: hidden;
