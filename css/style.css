@@ -499,6 +499,7 @@ nav {
     padding: 170px 0px 100px 0px;
     /*margin-top: 120px;*/
 	background-repeat:no-repeat;
+	background-position: center;
 }
 
 #header h2 {
