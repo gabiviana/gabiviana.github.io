@@ -84,6 +84,7 @@
     -webkit-animation-duration: 4s;
     -moz-animation-duration: 4s;
     animation-duration: 4s;
+	
 }
 
 .fade-it {
@@ -132,6 +133,7 @@
     -moz-animation-duration: 1s;
     animation-duration: 1s;
     color: #FFF;
+	
 }
 
 .fade-it2 {
@@ -449,6 +451,7 @@ nav {
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
+	opacity:40%;
 }
 
 /* FOR REDUCING THE HEIGHT OF THE NAVIGATION */
@@ -496,10 +499,13 @@ nav {
     /*padding: 120px 0;*/
     padding: 170px 0;
     /*margin-top: 120px;*/
+	background-repeat:no-repeat;
 }
 
 #header h2 {
     color: #FFF;
+	background-color:#02B9BB;
+	opacity:0.5;
 }
 
 #header .lead {
@@ -813,7 +819,7 @@ nav {
 
 #aboutme {
     padding: 20px 0px 40px 0;
-    background: #DDDDDD;
+    background: #FFF;
     font-size: 16px;
     text-align: left
 }
