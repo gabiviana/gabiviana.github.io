@@ -442,7 +442,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    rgba:(8, 33, 61, 1);
+    rgba:(8, 33, 61, 0.5);
     z-index: 10000;
     height: 120px;
     /*border-bottom: 1px solid #e5e5e5;*/
