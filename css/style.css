@@ -504,14 +504,15 @@ nav {
 
 #header h2 {
     color: #FFF;
-	background-color:#02B9BB;
-	opacity:0.5;
+
 }
 
 #header .lead {
     font: bold 16px 'latolight', sans-serif;
     font-size: 1.6rem;
     color: #FFF;
+	background-color:#02B9BB;
+	opacity:0.5;
 }
 
 /* 05.WORKS SETTINGS ================================================== */
