@@ -8,32 +8,14 @@ Gabriela Viana
 
 Renoir Boulanger
   Email: hello@renoirboulanger.com
-  Twitter: @renoirb
+  GitHub: https://github.com/renoirb
+  GitLab: https://gitlab.com/renoirb
+  CodeBerg: https://codeberg.org/renoirb
   Location: Montréal, Quebec, Canada
-  Web: renoirboulanger.com
+  Web: https://renoirb.com
   Role: Deployment, HTML/CSS/JavaScript review
-
-
-/* THANKS */
-
-Supview
-  Email: hello@iamsupview.be
-  Contact: http://themeforest.net/user/Supview
-  Web: www.iamsupview.be
-  Twitter: @Supview
-  Role: Theme Designer of the present theme
-
-If you want to use this theme, please respect the rights of the theme designer and purchase a license.
 
 
 /* SITE */
 
-Git repository: https://github.com/gabiviana/gabiviana-website/
-
-Components:
-  - https://github.com/gabiviana/gabiviana-website/package.json
-  - https://github.com/gabiviana/gabiviana-website/bower.json
-
-Software:
-  - Grunt
-  - Theme from Subview
+Git repository: https://github.com/gabiviana/gabiviana.github.io
