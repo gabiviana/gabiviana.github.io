@@ -12,11 +12,9 @@ converter.setOption('openLinksInNewWindow', true)
  * - https://github.com/traceypooh/blogtini/pull/7/files#r1343474668
  */
 const handleContextRequest_MarkdownContent = (event) => {
-  console.info('handleContextRequest_MarkdownContent event', event)
   if (event.context === ContextRequest_MarkdownContent) {
     event.stopPropagation();
     const innerHTML = event?.target?.innerHTML ?? ''
-    console.info('handleContextRequest_MarkdownContent', innerHTML)
     if (innerHTML) {
       const html = converter.makeHtml(innerHTML)
       event.callback({ html });
