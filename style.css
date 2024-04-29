@@ -1,0 +1,92 @@
+/**
+ * SECTION: Variables definitions
+ */
+:root {
+  --color-alpha: #ececec;
+  --color-alpha: lch(93% 0 270);
+  --color-alpha-text: lch(20% 0 270);
+  --color-accent-text: #0f75bc;
+  --color-accent-text: lch(55% 35% 247);
+  --bg-header: var(--color-alpha);
+  --bg-body: var(--color-alpha);
+}
+
+
+/**
+ * SECTION: fonts and inherit-ables.
+ */
+html {
+  font-family: 'Open Sans', -apple-system, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  -webkit-text-size-adjust: 100%;
+}
+.alternate-font-style {
+  font-family: Georgia, serif;
+  font-weight: 100;
+}
+
+
+/**
+ * SECTION: Global
+ */
+::-moz-selection {
+  background: #fe57a1;
+  color: #555;
+}
+::selection {
+  background: #cecece;
+  color: #555;
+  text-shadow: none;
+}
+a {
+  color: var(--color-alpha-text);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-text);
+  text-decoration: underline;
+}
+
+
+/**
+ * SECTION: Layout landmarks
+ */
+html {
+  color: var(--color-alpha-text);
+  background-color: var(--bg-header);
+  overflow-y: scroll;
+}
+#body-wrapper {
+  margin: 0 3em;
+}
+#body-wrapper > .section {
+  /*border: 1px solid rgb(233 171 88);*/
+  padding: 10px 10px 0 10px;
+}
+#body-wrapper > header.section {
+  flex-direction: row;
+}
+
+
+/**
+ * SECTION: Intro
+ */
+.section-intro h1 {
+  font-size: 4em;
+  font-weight: 100;
+  margin: 0;
+}
+.section-intro p {
+  font-size: 1.2em;
+}
+
+
+/**
+ * SECTION: Utilities
+ */
+.underlined {
+  border-bottom: 3px solid var(--color-accent-text);
+}
