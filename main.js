@@ -1,9 +1,12 @@
 import Showdown from 'https://ga.jspm.io/npm:showdown@2.1.0/dist/showdown.js'
 import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
-import { default as MarkdownContent, ContextRequest_MarkdownContent } from 'https://renoirb.com/esm-modules/markdown-content.mjs'
+import {
+  default as MarkdownContent,
+  ContextRequest_MarkdownContent,
+} from 'https://renoirb.com/esm-modules/markdown-content.mjs'
 
-const converter = new Showdown.Converter()
-converter.setOption('openLinksInNewWindow', true)
+const c = new Showdown.Converter()
+c.setOption('openLinksInNewWindow', true)
 
 /**
  * ContextRequest to update Markdown source
@@ -13,18 +16,18 @@ converter.setOption('openLinksInNewWindow', true)
  */
 const handleContextRequest_MarkdownContent = (event) => {
   if (event.context === ContextRequest_MarkdownContent) {
-    event.stopPropagation();
+    event.stopPropagation()
     const innerHTML = event?.target?.innerHTML ?? ''
     if (innerHTML) {
-      const html = converter.makeHtml(innerHTML)
-      event.callback({ html });
+      const html = c.makeHtml(innerHTML)
+      event.callback({ html })
     }
   }
 }
 
-window.document.addEventListener('context-request', (event) => {
-  handleContextRequest_MarkdownContent(event);
-})
+window.document.addEventListener(
+  'context-request',
+  handleContextRequest_MarkdownContent,
+)
 
 registerCustomElement(window, 'gv-markdown-content', MarkdownContent)
-

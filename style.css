@@ -11,12 +11,11 @@
   --bg-body: var(--color-alpha);
 }
 
-
 /**
- * SECTION: fonts and inherit-ables.
+ * SECTION: fonts,text,line-spacing and inherit-ables.
  */
 html {
-  font-family: 'Open Sans', -apple-system, Arial, sans-serif;
+  font-family: 'Roboto', -apple-system, Arial, sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
@@ -27,19 +26,30 @@ html {
   font-family: Georgia, serif;
   font-weight: 100;
 }
-
+gv-markdown-content {
+  line-height: 1.5em;
+}
 
 /**
  * SECTION: Global
  */
-::-moz-selection {
-  background: #fe57a1;
-  color: #555;
+html {
+  color: var(--color-alpha-text);
+  background-color: var(--bg-header);
+  overflow-y: scroll;
 }
-::selection {
-  background: #cecece;
-  color: #555;
-  text-shadow: none;
+body {
+  margin: 0;
+}
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 a {
   color: var(--color-accent-text);
@@ -49,26 +59,23 @@ a:hover {
   text-decoration: underline;
 }
 
-
 /**
  * SECTION: Layout landmarks
  */
-html {
-  color: var(--color-alpha-text);
-  background-color: var(--bg-header);
-  overflow-y: scroll;
-}
 #body-wrapper {
   margin: 0 3em;
+  max-width: 100%;
+  display: grid;
 }
 #body-wrapper > .section {
-  /*border: 1px solid rgb(233 171 88);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px 10px 0 10px;
 }
 #body-wrapper > header.section {
   flex-direction: row;
 }
-
 
 /**
  * SECTION: Intro
@@ -82,10 +89,35 @@ html {
   font-size: 1.2em;
 }
 
-
 /**
  * SECTION: Utilities
  */
 .underlined {
   border-bottom: 3px solid var(--color-accent-text);
+}
+
+/**
+ * Media queries
+ **/
+@media (width <= 1250px) {
+  #body-wrapper {
+    margin: 0 1.2em;
+  }
+  .section-intro h1 {
+    font-size: 2.4em;
+  }
+}
+
+@media print {
+  /* Print in parens what's in parens */
+  a[href]:not([href^='mailto']):after {
+    /*   :not([href^="mailto"])
+     *   ----------------------
+     *   Is to not print the mail to, keep this as long as you're keeping the EMail link text the same as the email.
+     */
+    content: ' (see ' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
 }
