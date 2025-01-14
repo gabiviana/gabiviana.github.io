@@ -1,0 +1,31 @@
+#
+# Redirects
+#
+# Format:
+#
+# [source] [destination] [code?]
+#
+# source required
+#     A file path.
+#     Can include wildcards (*) and placeholders.
+#     Because fragments are evaluated by your browser and not Cloudflare’s network, any fragments in the source are not evaluated.
+#
+# destination required
+#     A file path or external link.
+#     Can include fragments, query strings, splats, and placeholders.
+#
+# code default: 302
+#     Optional parameter
+#
+#
+# A project is limited to 2000 static redirects and 100 dynamic redirects,
+# for a combined total of 2100 redirects.
+# Each redirect declaration has a 1000-character limit.
+#
+# Bookmarks:
+# - https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# FILES ----------
+#
+/links-to/2025-deck https://www.figma.com/proto/10c6fftCFNYwW3Mt5CzmTQ/Presentation?type=design&node-id=30-3215&t=FAoNxBywJWw3Xhal-0&scaling=scale-down&page-id=30%3A105&starting-point-node-id=30%3A3215 302
+
